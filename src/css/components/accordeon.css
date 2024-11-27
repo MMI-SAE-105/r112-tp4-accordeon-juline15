@@ -2,6 +2,10 @@
 * Accordeon
 */
 
+.accordeon {
+    display: flex;
+}
+
 
 details {
     display: inline-block;
