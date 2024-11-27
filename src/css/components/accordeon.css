@@ -4,27 +4,28 @@
 
 .accordeon {
     display: flex;
+    flex-direction: column;
 }
 
-
 details {
-    display: inline-block;
     overflow: hidden;
-    max-width: 300px;
-    transition: max-width 1s ease;
-    position: relative;
-
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+    padding: 5px;
 }
 
 details[open] {
-    max-width: 300px;
-    margin-right: 1rem;
-    vertical-align: top;
+    max-height: 500px;
 }
 
 summary {
-    list-style: none;
     cursor: pointer;
-    display: flex;
-    align-items: center;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+details[open] summary {
+    background-color: #e0e0e0;
 }
